@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Remix-Run",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "target": "ES2019"
+  },
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "styles/tailwind.css"]
+}
