@@ -9,17 +9,20 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import tailwindStylesheetUrl from "./styles/local-tailwind.css"
+import localTailwindStylesheetUrl from "./styles/local-tailwind.css"
 import { getEnv } from "./env.server";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "TredX - Financier",
+  title: "Remix-Web",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }]
+  return [
+    { rel: "stylesheet", href: localTailwindStylesheetUrl },
+   //{ rel: "stylesheet", href: sharedPackageTailwindStylesheetUrl }
+  ]
 }
 
 type LoaderData = {
