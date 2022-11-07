@@ -9,7 +9,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import tailwindStylesheetUrl from "./styles/tailwind.css"
+import tailwindStylesheetUrl from "./styles/local-tailwind.css"
 import { getEnv } from "./env.server";
 
 export const meta: MetaFunction = () => ({

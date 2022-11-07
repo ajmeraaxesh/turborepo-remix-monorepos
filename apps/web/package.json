@@ -5,9 +5,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./styles/tailwind.css -o ./app/styles/tailwind.css",
+    "build:css": "tailwindcss -m -i ./styles/local-tailwind.css -o ./app/styles/local-tailwind.css",
     "dev": "concurrently \"npm run dev:css\" \"remix dev --port 4000\"",
-    "dev:css": "tailwindcss -w -i ./styles/tailwind.css -o ./app/styles/tailwind.css"
+    "dev:css": "tailwindcss -w -i ./styles/local-tailwind.css -o ./app/styles/local-tailwind.css"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
