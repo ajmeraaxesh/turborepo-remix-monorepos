@@ -1,12 +1,12 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "extends": "tsconfig/remix.json",
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
     },
-    "noEmit": true,
     "resolveJsonModule": true
   }
 }

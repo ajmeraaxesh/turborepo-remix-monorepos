@@ -1,7 +1,10 @@
+import { Button } from "ui";
+
 //TODO: Determine based on login whether the user is already signed or needs to be signed in
 export default function Index() {
   return (
     <div className="bg-gray-100">
+      <Button  />
       <h1 className="text-xl  text-indigo-500">Welcome to Remix</h1>
       <ul>
         <li>

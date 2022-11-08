@@ -9,17 +9,17 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import  tailwindStylesheetUrl from "./styles/tailwind.css"
+import  localTailwindStylesheetUrl from "./styles/local-tailwind.css"
 import { getEnv } from "./env.server";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "TredX - Financier",
+  title: "Remix - Docs",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }]
+  return [{ rel: "stylesheet", href: localTailwindStylesheetUrl }]
 }
 
 type LoaderData = {
