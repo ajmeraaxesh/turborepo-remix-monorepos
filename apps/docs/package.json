@@ -4,10 +4,10 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./styles/tailwind.css -o ./app/styles/tailwind.css",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev --port 4001\"",
-    "dev:css": "tailwindcss -w -i ./styles/tailwind.css -o ./app/styles/tailwind.css"
+    "build": "pnpm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/local-tailwind.css -o ./app/styles/local-tailwind.css",
+    "dev": "concurrently \"pnpm run dev:css\" \"remix dev --port 4001\"",
+    "dev:css": "tailwindcss -w -i ./styles/local-tailwind.css -o ./app/styles/local-tailwind.css"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
@@ -27,7 +27,6 @@
     "@remix-run/eslint-config": "^1.7.3",
     "@remix-run/serve": "^1.7.3",
     "@tailwindcss/forms": "^0.5.3",
-    "tsconfig": "workspace:*",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.12",
@@ -35,6 +34,8 @@
     "eslint": "^8.23.1",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.1",
+    "tailwind-config": "workspace:*",
+    "tsconfig": "workspace:*",
     "typescript": "^4.7.4"
   },
   "engines": {

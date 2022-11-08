@@ -4,9 +4,9 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build:css && remix build",
+    "build": "pnpm run build:css && remix build",
     "build:css": "tailwindcss -m -i ./styles/local-tailwind.css -o ./app/styles/local-tailwind.css",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev --port 4000\"",
+    "dev": "concurrently \"pnpm run dev:css\" \"remix dev --port 4000\"",
     "dev:css": "tailwindcss -w -i ./styles/local-tailwind.css -o ./app/styles/local-tailwind.css"
   },
   "dependencies": {
