@@ -1,14 +1,13 @@
 import invariant from "tiny-invariant";
 
+// This function is used for setting using the environment files on both client and server side so only
+// set the variables which needs to be exposed on both sides
 export function getEnv() {
-    invariant(process.env.BUYER_SELLER_URL, "BUYER_SELLER_URL should be defined");
-    invariant(process.env.FINANCIER_URL, "FINANCIER_URL should be defined");
-    invariant(process.env.PLATFORM_URL, "PLATFORM_URL should be defined");
+    //TODO:  Use invariant to check if the environment varaibles are in ".env" files
 
     return {
-        BUYER_SELLER_URL: process.env.BUYER_SELLER_URL,
-        FINANCIER_URL: process.env.FINANCIER_URL,
-        PLATFORM_URL: process.env.PLATFORM_URL,
+        //TODO: Add the environment variables which are needed in server-side and client side as well over here
+
     };
 }
 

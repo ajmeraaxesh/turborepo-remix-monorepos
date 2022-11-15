@@ -2,6 +2,9 @@ import type { EntryContext } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { renderToString } from "react-dom/server";
 
+// creating an "ENV" variable available on all server side code
+global.ENV = getEnv()
+
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,

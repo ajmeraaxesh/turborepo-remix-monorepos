@@ -50,11 +50,8 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.ENV = ${JSON.stringify(data.ENV)}`,
-          }}
-        />
+        {/** Exposing Environment variable which is to be available on client side */}
+        <script dangerouslySetInnerHTML={{ __html: `window.ENV = ${JSON.stringify(data.ENV)}`}}/>
         <LiveReload />
       </body>
     </html>
